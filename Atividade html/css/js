@@ -1,0 +1,75 @@
+#JS
+
+//dom
+const btalvo = document.querySelector('#alvo')
+const btraiva = document.querySelector('#raiva')
+const btalegria = document.querySelector('#felicidade')
+const bttristeza = document.querySelector('#tristeza')
+const btnojin = document.querySelector('#nojo')
+
+//eventos
+
+btraiva.addEventListener('click',aiva)
+btalegria.addEventListener('click',legria)
+bttristeza.addEventListener('click',trite)
+btnojin.addEventListener('click',nojin)
+
+//funcoes
+
+function aiva(){
+    alvo.src='imagens/raiva.png'
+}
+function legria(){
+    alvo.src='imagens/felicidade.png'
+}
+function trite(){
+    alvo.src='imagens/tristeza.png'
+}
+function nojin(){
+    alvo.src='imagens/nojin.png'
+}
+
+
+#CSS
+.emocoes button{
+    width: 80px;
+    background: cyan;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.emocoes button:hover{
+    background: pink;
+    transform: translateY(-2px);
+}
+
+
+
+#HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stile.css">
+    <title>Divertidamente</title>
+</head>
+<body>
+    <div class='emocoes'>
+    <img src="imagens/silhueta.png" id="alvo">
+
+        <div>
+            <button id="raiva">raiva</button>
+            <button id="felicidade">felicidade</button>
+            <button id="tristeza">tristeza</button>
+            <button id="nojo">nojo</button>
+        </div>
+    
+    </div>
+     
+
+    <script src='js/javascript.js'></script>
+</body>
+</html>
