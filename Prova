@@ -1,0 +1,146 @@
+const text = document.querySelector('#descricao')
+const exposicao = document.querySelector('#cartaz')
+const bthomem = document.querySelector('#homem')
+const btcaribe = document.querySelector('#caribe')
+const btrambo1 = document.querySelector('#rambo1')
+const btfuriosos = document.querySelector('#furiosos')
+const btnenhum = document.querySelector('#nenhum')
+
+bthomem.addEventListener('click',aranha)
+btcaribe.addEventListener('click',piratas)
+btrambo1.addEventListener('click',rambo)
+btfuriosos.addEventListener('click',velozes)
+btnenhum.addEventListener('click',vazia)
+
+function aranha(){
+    exposicao.src='image/aranha.png'
+    text.textContent = 'Peter Parker tem a sua identidade secreta revelada e pede ajuda ao Doutor Estranho. Quando um feitiço para reverter o evento não sai como o esperado, o Homem-Aranha e seu companheiro dos Vingadores precisam enfrentar inimigos de todo o multiverso.'
+}
+
+function piratas(){
+    exposicao.src='image/piratas.webp'
+    text.textContent = 'O pirata Jack Sparrow tem seu navio saqueado e roubado pelo capitão Barbossa e sua tripulação. Com o navio de Sparrow, Barbossa invade a cidade de Port Royal, levando consigo Elizabeth Swann, filha do governador. Para'
+}
+
+function rambo(){
+    exposicao.src='image/rambo.jpg'
+    text.textContent = 'Um veterano da Guerra do Vietnã usa todo seu treinamento e agressividade exercitada nos campos de batalha quando é preso e torturado por policiais.'
+}
+
+function velozes(){
+    exposicao.src='image/velozes.webp'
+    text.textContent = 'Brian O Conner é um policial que se infiltra no submundo dos rachas de rua para investigar uma série de furtos. Enquanto tenta ganhar o respeito e a confiança do líder Dom Toretto, ele corre o risco de ser desmascarado.'
+}
+
+function vazia(){
+    vazia.src='image/vazia.jpg'
+   
+}
+//css
+
+
+
+body{
+    background: linear-gradient(blue cyan);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    color: aliceblue;
+    text-align: center;
+    margin: auto;
+    background-attachment: fixed;
+
+}
+
+.img{
+    height: 200px;
+    
+    width: 200px;
+}
+
+
+.central{
+    width: 600px;
+    background: blue;
+    font-size: 15px;
+    text-align: center; 
+    background: linear-gradient(blue cyan);
+    border-radius: 20px;
+    box-shadow: 5px 5px 18px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    width: 1000px;
+
+}
+.cartaz{
+    display: flex;
+    gap: 32px;
+}
+.background{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.central button{
+    background-color: snow;
+    border-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.5s;
+
+}
+
+p{
+    width: 289px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+
+///html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <title>questão de filmes</title>
+
+</head>
+<body>
+
+    <div class='central'>
+        <h1>filmes</h1>
+        <div class="cartaz">
+            <img src="image/vazia.jpg" id="cartaz" >    
+            <p id="descricao">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, laudantium fugiat eos quod accusantium excepturi, praesentium laboriosam suscipit itaque est maiores necessitatibus hic exercitationem doloribus eligendi. Enim repudiandae iusto voluptates!</p>
+        </div>
+
+
+        <div class="button">
+            <button id="aranha">Homen aranha</button>
+            <button id="piratas">pirata do caribe</button>
+            <button id="rambo">Rambo</button>
+            <button id="velozes">Velozes</button>
+            <button id="vazia">nenhum</button>
+        </div>
+
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
