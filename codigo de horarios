@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ciclo Dia, Tarde e Noite</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Fundo Dinâmico</h1>
+        <p id="greeting"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+  //css
+  body {
+    margin: 0;
+    height: 100vh;
+    background-image: url('noite.jpg'); /* Imagem padrão (noite) */
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    font-size: 2.5em;
+}
+//JS
+
+function updateBackground() {
+    const hour = new Date().getHours();
+    const body = document.body;
+    const greeting = document.getElementById('greeting');
+
+    if (hour >= 6 && hour < 12) {
+        body.style.backgroundImage = "url('dia.jpg')"; // Imagem do dia
+        greeting.textContent = "Bom Dia!";
+    } else if (hour >= 12 && hour < 18) {
+        body.style.backgroundImage = "url('tarde.jpg')"; // Imagem da tarde
+        greeting.textContent = "Boa Tarde!";
+    } else {
+        body.style.backgroundImage = "url('noite.jpg')"; // Imagem da noite
+        greeting.textContent = "Boa Noite!";
+    }
+}
+
+// Chama a função ao carregar a página
+updateBackground();
