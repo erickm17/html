@@ -1,0 +1,54 @@
+body{
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /*remove a barra de rolagem*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: rgba(245, 245, 245, 0.815)
+}
+
+#fundo{
+    min-width: 100%; /*determina o maximo da largura do video*/
+    width: 100%;
+    height: 100%;
+    z-index: -1;    /*manda o video para o subsolo da tela*/
+    position: absolute; /*determina a posição do video para o subsolo*/
+    top: 0;
+    left: 0;
+    object-fit: cover; /*para se adaptar a janela */
+    opacity: 50%;
+
+}
+
+.central{
+    width: fit-content;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0);
+    padding: 25px;
+    border-radius: 20px
+    
+}
+
+.central div input{
+    height: 30px;
+    width: 80%;
+    border-radius: 15px;
+    border: none;
+}
+
+.central div button{
+    background: black;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 3px 4px;
+    cursor: pointer;
+}
+
+#qrcode{
+    margin-top: 30px;
+
+}
+
